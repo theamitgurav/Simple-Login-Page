@@ -6,7 +6,6 @@
 
 #s1{
     height: 100vh;
-
 }
 
 #s1{
@@ -20,9 +19,10 @@
     justify-content: center;
     align-items: center;
 }
+
 #s2{
-    height:20em;
-    width: 20em;
+    height:30em;
+    width: 30em;
     border-radius: 20px;
     /* box-shadow: 10px 10px 5px 12px rgb(132, 32, 23); */
     /* box-shadow: rgb(27, 87, 72); */
@@ -36,9 +36,10 @@
 input{
     border: 1px rgb(194, 191, 191);
     outline: 1px solid rgb(76, 74, 74);
-    padding: 10px;
-    width: 15em;
+    padding: 20px;
+    width: 20em;
     border-radius: 5px;
+    font-size: 16px;
 }
 h1{
     text-align: center;
@@ -50,13 +51,18 @@ button{
     border: 1px rgb(194, 191, 191);
     /* outline: 1px solid rgb(76, 74, 74); */
     background-color: #00a2ed;
-    margin-left: 3em;
-    padding: 10px;
+    margin-left: 7em;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 10em;
     border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    
 }
 p{
     margin-top: 10px;
     text-align: center;
-    font-size: 12px;
+    font-size: 16px;
 }
