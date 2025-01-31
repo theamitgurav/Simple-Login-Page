@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="s1">
+       <div id="s2">
+        
+        <form action="" onsubmit="saveLogin(event)">
+            <h1>Login up</h1>
+           
+            <div id="inputEmail" class="input">
+                
+                <input id = "inputEmailData" type="email" placeholder="Email" required><br>
+            </div>
+            <div id="inputPass" class="input">
+                <input id = "inputPassData" type="password" placeholder="Password" required>
+            </div>
+            
+               <div id="btn">
+                <button onclick="saveLogin(event)">Sign Up</button>
+               </div>
+
+            <p>Not Register? <a href="index.html">Create Account</a></p>
+           
+        </form>
+       </div>
+    </div>
+    <script>
+        function saveLogin(event){
+            event.preventDefault();
+
+            const inputEmail = document.getElementById("inputEmailData");
+            const inputPass = document.getElementById("inputPassData");
+
+            const emailD = inputEmail.value;
+            const passD = inputPass.value;
+
+            const savedEmail = localStorage.getItem("userEmail");
+            const savedPass = localStorage.getItem("userPass");
+
+            if(emailD===savedEmail && passD===savedPass){
+                // alert("Login Successfull");
+                window.location.href = "welcome.html";
+                inputEmail.value = ""
+                inputPass.value = ""
+            }else{
+                alert("Invalid Details! try again");
+                inputEmail.value = ""
+                inputPass.value = ""
+            }
+            
+
+        }
+    </script>
+</body>
+</html>

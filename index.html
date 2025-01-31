@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="s1">
+       <div id="s2">
+        
+        <form action="" onsubmit="saveData(event)">
+            <h1>Sign up</h1>
+            <div id="inputName" class="input">
+                
+                <input type="text" id="nameData" placeholder="Name" required><br>
+            </div>
+            <div id="inputEmail" class="input">
+                
+                <input type="email" id="emailData" placeholder="Email" required><br>
+            </div>
+            <div id="inputPass" class="input">
+                <input type="password" id="passData" placeholder="Password" required>
+            </div>
+            
+               <div id="btn">
+                <button onclick="saveData(event)">Sign Up</button>
+               </div>
+
+            <p>Already have an Account? <a href="login.html">Log in</a></p>
+           
+        </form>
+       </div>
+    </div>
+    <script>
+        function saveData(event){
+            event.preventDefault();
+            event.preventDefault();
+            const nameInput = document.getElementById("nameData");
+            const emailInput = document.getElementById("emailData");
+            const passInput = document.getElementById("passData");
+
+            const nameD = nameInput.value
+            const emailD = emailInput.value
+            const passD = passInput.value
+
+            localStorage.setItem("userName", nameD)
+            localStorage.setItem("userEmail", emailD)
+            localStorage.setItem("userPass", passD)
+
+
+            alert("Signup Successfull!")
+
+            window.location.href = "login.html";
+
+            nameInput.value = "";
+            emailInput.value = "";
+            passInput.value = "";
+        }
+    </script>
+</body>
+</html>
